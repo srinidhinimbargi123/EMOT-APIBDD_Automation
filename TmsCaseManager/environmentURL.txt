@@ -1,0 +1,3 @@
+dev=https://atoms-api-dev.solyticspartners.com
+qa=https://atoms-api-qa.solyticspartners.com
+

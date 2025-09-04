@@ -1,0 +1,19 @@
+ {
+    "datamanagerstart":{
+        "file_name": "alert_ids_86556b1199a2bbe4c8aba2f347abc142_86556b1199a2bbe4c8aba2f347abc142_86556b1199a2bbe4c8aba2f347abc142 (1).csv",
+        "is_sample": false
+      },
+      "datamanagerpart":{
+        "part_number": 1,
+        "job_id": "4f564417-ecbd-4e98-8d8c-fb85c1ba2b33"
+      },
+      "datamanagercomplete":{
+        "job_id": "4f564417-ecbd-4e98-8d8c-fb85c1ba2b33",
+        "schema_mapping_id": 19
+      },
+      "datamanageringestion":{
+        "job_id": "4f564417-ecbd-4e98-8d8c-fb85c1ba2b33",
+        "schema_mapping_id": 19
+      }
+      
+ }

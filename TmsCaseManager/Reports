@@ -1,0 +1,25 @@
+Feature: View Alerts in Common Queue # features/case_manager.feature:1
+
+  Scenario: Login to TMS-CaseManager and view all alerts in Common Queue         # features/case_manager.feature:3
+    Given the user is logged in to TMS-CaseManager                               # features/steps/case_steps.py:18
+    When the user navigates to the Common Queue                                  # features/steps/case_steps.py:23
+    Then the system should display all alerts with Alert ID and Transaction Type # features/steps/case_steps.py:31
+
+  Scenario: Login to TMS-CaseManager and view all alerts in Common Queue1        # features/case_manager.feature:8
+    Given the user is logged in to TMS-CaseManager                               # features/steps/case_steps.py:18
+    When the user navigates to the Common Queue                                  # features/steps/case_steps.py:23
+    Then the system should display all alerts with Alert ID and Transaction Type # features/steps/case_steps.py:31
+    Then Investigate one of the case                                             # features/steps/case_steps.py:38
+      Assertion Failed: Expected status 300 but got 200. 
+      Captured stdout:
+      [Listener] Step Started: the user is logged in to TMS-CaseManager
+      [Listener] Step Passed: the user is logged in to TMS-CaseManager
+      [Listener] Step Started: the user navigates to the Common Queue
+      [Listener] Step Passed: the user navigates to the Common Queue
+      [Listener] Step Started: the system should display all alerts with Alert ID and Transaction Type
+      response :  {'count': 10, 'next': 'https://atoms-api-dev.solyticspartners.com/api/v1/qa/atoms/case-manager/filters/data/?page=2&page_size=5', 'previous': None, 'results': [{'alert_id': 8495235, 'scenario_id': 5970, 'transaction_details': 'trans_automation_0071188889067', 'type': 'TMS', 'alert_date': '2025-09-02 12:49:08', 'alert_scenario': 'xsddwscscds', 'scenario_category': 'Fraud', 'customer_id': 'harsh25', 'customer_name': 'harsh', 'customer_type': 'individual', 'kyc_status': 'Verified', 'customer_segment': 'INDIVIDUAL', 'priority': '5', 'risk': 'High', 'team': 'user_analyst team', 'all_parameters': ['transaction.amount > 0 '], 'involved_parameters': ['transaction.amount(7000.0) > 0 ']}, {'alert_id': 8495232, 'scenario_id': 5970, 'transaction_details': 'IND56-Transac_STST43112111', 'type': 'TMS', 'alert_date': '2025-09-02 12:45:37', 'alert_scenario': 'xsddwscscds', 'scenario_category': 'Fraud', 'customer_id': 'cust_910081111', 'customer_name': 'Jonar', 'customer_type': 'individual', 'kyc_status': 'Verified', 'customer_segment': None, 'priority': '5', 'risk': 'High', 'team': 'user_analyst team', 'all_parameters': ['transaction.amount > 0 '], 'involved_parameters': ['transaction.amount(100.0) > 0 ']}, {'alert_id': 8495229, 'scenario_id': 5970, 'transaction_details': 'trans_automation_0071188889067', 'type': 'TMS', 'alert_date': '2025-09-02 12:21:40', 'alert_scenario': 'xsddwscscds', 'scenario_category': 'Fraud', 'customer_id': 'harsh25', 'customer_name': 'harsh', 'customer_type': 'individual', 'kyc_status': 'Verified', 'customer_segment': 'INDIVIDUAL', 'priority': '5', 'risk': 'High', 'team': 'Fallback team 2', 'all_parameters': ['transaction.amount > 0 '], 'involved_parameters': ['transaction.amount(7000.0) > 0 ']}, {'alert_id': 8495226, 'scenario_id': 5970, 'transaction_details': 'trans_automation_007150', 'type': 'TMS', 'alert_date': '2025-09-02 12:07:19', 'alert_scenario': 'xsddwscscds', 'scenario_category': 'Fraud', 'customer_id': 'harsh26', 'customer_name': 'harsh', 'customer_type': 'individual', 'kyc_status': 'Verified', 'customer_segment': 'INDIVIDUAL', 'priority': '5', 'risk': 'High', 'team': 'user_analyst team', 'all_parameters': ['transaction.amount > 0 '], 'involved_parameters': ['transaction.amount(7000.0) > 0 ']}, {'alert_id': 8495223, 'scenario_id': 5970, 'transaction_details': 'trans_automation_007149', 'type': 'TMS', 'alert_date': '2025-09-02 12:07:08', 'alert_scenario': 'xsddwscscds', 'scenario_category': 'Fraud', 'customer_id': 'harsh26', 'customer_name': 'harsh', 'customer_type': 'individual', 'kyc_status': 'Verified', 'customer_segment': 'INDIVIDUAL', 'priority': '5', 'risk': 'High', 'team': 'user_analyst team', 'all_parameters': ['transaction.amount > 0 '], 'involved_parameters': ['transaction.amount(7000.0) > 0 ']}]}
+      [Listener] Step Passed: the system should display all alerts with Alert ID and Transaction Type
+      [Listener] Step Started: Investigate one of the case
+      [Listener] Step Failed: Investigate one of the case
+
+

@@ -1,0 +1,39 @@
+# TMS-CaseManager API Project Requirements
+# Core testing framework for BDD testing
+behave>=1.2.6
+
+# HTTP requests library for API testing
+requests>=2.28.0
+
+# Allure reporting for test results and reporting
+allure-behave>=2.13.0
+allure-pytest>=2.13.0
+
+# Additional utilities that might be needed
+# (Most of these are built-in with Python, but listed for completeness)
+typing-extensions>=4.0.0
+
+# Optional: For better JSON handling and validation
+jsonschema>=4.0.0
+
+# Optional: For enhanced HTTP testing capabilities
+httpx>=0.24.0
+
+# Optional: For data handling and manipulation
+pandas>=1.5.0
+
+# Optional: For configuration management
+pyyaml>=6.0
+
+# Optional: For logging enhancements
+colorlog>=6.7.0
+
+# Optional: For test data generation
+faker>=18.0.0
+behave==1.2.6
+requests==2.32.3
+allure-behave==2.13.5
+allure-pytest==2.13.5
+pytest==8.3.2
+pytest-bdd==7.1.2
+tk==0.1.0

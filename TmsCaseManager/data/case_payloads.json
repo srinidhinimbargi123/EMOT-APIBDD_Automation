@@ -1,0 +1,17 @@
+{
+    "alertfilter": {
+      "models": ["Alert"],
+      "filters": {
+        "Alert": {
+          "alert_type": ["TMS"]
+        }
+      },
+      "assigned": false
+    },
+
+      "casedocuments":{
+        "case": 16412
+    },
+    "investigatecase":{"status":"Under Investigation"}
+  }
+  
