@@ -1,0 +1,2 @@
+Step: the user navigates to the Common Queue
+Error: HTTPSConnectionPool(host='atoms-api-devv.solyticspartners.com', port=443): Max retries exceeded with url: /api/v1/qa/atoms/case-manager/filters/data/?page=1&page_size=5 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000188BA522D50>: Failed to resolve 'atoms-api-devv.solyticspartners.com' ([Errno 11001] getaddrinfo failed)"))
