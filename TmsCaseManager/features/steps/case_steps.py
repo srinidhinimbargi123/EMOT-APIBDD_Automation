@@ -14,7 +14,7 @@ from behave import *
 
 ENV_NAME = ApiHelper._load_env_name()
 @given("the user is logged in to TMS-CaseManager")
-def step_impl1(context):
+def step_impl1(context): 
     context.token = loginHelper.TMS_CaseManagerLogin()
     assert context.token is not None, "Login token is None"
 

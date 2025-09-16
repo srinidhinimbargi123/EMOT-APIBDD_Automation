@@ -160,10 +160,11 @@ tk.Label(login_frame, text="Login to access your account and explore", font=("Ar
          bg="white", fg="gray").pack()
 
 username_entry = tk.Entry(login_frame, font=("Arial", 12), bg="#eef3ff")
-username_entry.insert(0, "demo_testuser2")
+username_entry.insert(0, "user_analyst")
 username_entry.pack(pady=10, ipady=8, ipadx=5)
 
 password_entry = tk.Entry(login_frame, font=("Arial", 12), show="*", bg="#eef3ff")
+password_entry.insert(0, "user_analyst")
 password_entry.pack(pady=10, ipady=8, ipadx=5)
 
 env_var = tk.StringVar(login_frame)
@@ -174,7 +175,7 @@ tk.OptionMenu(login_frame, env_var, "QA", "DEV").pack(pady=10)
 tk.Label(login_frame, text="Enter Feature File (e.g., case_manager.feature)",
          font=("Arial", 10), bg="white", fg="gray").pack()
 feature_entry = tk.Entry(login_frame, font=("Arial", 12), bg="#eef3ff")
-feature_entry.insert(0, "case_manager.feature")
+feature_entry.insert(0, "AlertQueue.feature")
 feature_entry.pack(pady=10, ipady=8, ipadx=5)
 
 tk.Button(login_frame, text="Sign In", font=("Arial", 12, "bold"),

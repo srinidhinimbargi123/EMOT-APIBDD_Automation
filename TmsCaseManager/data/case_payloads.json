@@ -1,17 +1,229 @@
 {
-    "alertfilter": {
-      "models": ["Alert"],
-      "filters": {
-        "Alert": {
-          "alert_type": ["TMS"]
+  "alertfilter": {
+    "models": [
+      "Alert"
+    ],
+    "filters": {
+      "Alert": {
+        "alert_type": [
+          "TMS"
+        ]
+      }
+    },
+    "assigned": false
+  },
+  "casedocuments": {
+    "case": 16412
+  },
+  "investigatecase": {
+    "status": "Under Investigation"
+  },
+  "transactionscreening": {
+    "transaction_id": "IND56-Transac_1234",
+    "transaction_type": "credit",
+    "payment_mode": "string",
+    "payer_account": {
+      "account_number": "444661788188",
+      "customer_id": "cust_910081111"
+    },
+    "payee_account": {
+      "account_number": "9001576688188",
+      "customer_id": "Sam123123sssssss-hdfc-20231"
+    },
+    "payer_customer": {
+      "customer_id": "cust_910081111",
+      "customer_name": "Jonar",
+      "customer_dob": "2001-01-01",
+      "customer_email": "jonar1@gmail.com",
+      "customer_phone": "7425896222",
+      "customer_address": "IRAN",
+      "customer_country": "IRAN",
+      "customer_tax_id": "741258",
+      "kyc_status": "Verified",
+      "payment_method": "CASH",
+      "kyc_document_type": "doc",
+      "kyc_document_number": "147822",
+      "customer_type": "individual",
+      "passport_number": "1478522",
+      "customer_photo": "https://randomuser.me/api/portraits/men/75.jpg",
+      "contract_no": "A-1001",
+      "passport_expiry_date": "2027-02-01",
+      "pan_number": "1478852222",
+      "pan_issue_country": "IRAN",
+      "pan_expiry_date": "2026-08-28",
+      "occupation": "Banker",
+      "income_range": "100000",
+      "source_of_funds": "Online",
+      "application_no": "A-10000",
+      "policyholder_annual_income": "100000",
+      "life_assured_annual_income": "10000",
+      "life_assured_name": "John",
+      "life_assured_client_id": "1258",
+      "created_at": "2019-08-24T14:15:22Z",
+      "updated_at": "2019-08-24T14:15:22Z",
+      "high_risk_flag": true
+    },
+    "payee_customer": {
+      "customer_id": "Sam123123sssssss-hdfc-20231",
+      "customer_name": "tim4"
+    },
+    "transaction_date": "2025-06-13T14:03:27Z",
+    "posted_date": "8009-10-25T14:14:27Z",
+    "amount": 100,
+    "ledger_entry": "debit",
+    "currency": "Irr",
+    "transaction_status": "Pending",
+    "transaction_reference_number": "string",
+    "transaction_source_system": "string",
+    "channel": "string",
+    "channel_type": "WEB",
+    "sap_screening": true,
+    "payer_location": "IRAN",
+    "payee_location": "IRAN",
+    "callback_url": "string",
+    "transaction_screening_type": "RealTime",
+    "asyncronous": false
+  },
+  "casemanagerolecreationdev": {
+    "name": "Alert for Automation Case Manager",
+    "description": "testing for the integration",
+    "module": "case_manager",
+    "permissions": [
+      62,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      92,
+      93,
+      97,
+      99,
+      63,
+      64,
+      102,
+      103,
+      104,
+      94,
+      95,
+      96
+    ]
+  },
+  "tmsrolecreationdev": {
+    "name": "automationtmsrole",
+    "module": "tms",
+    "description": "testing for the integration",
+    "permissions": [
+      58,
+      105,
+      59,
+      60,
+      61,
+      67,
+      68,
+      69,
+      80,
+      81,
+      82,
+      83,
+      91,
+      98,
+      100,
+      101,
+      106,
+      63,
+      64,
+      102,
+      103,
+      104,
+      65,
+      66
+    ]
+  },
+  "teamcreation": {
+    "team_admin": 1,
+    "levels": [
+        {
+            "rank": 1,
+            "name": "Level 1",
+            "roles": 151,
+            "members": [
+                1
+            ]
         }
-      },
-      "assigned": false
-    },
-
-      "casedocuments":{
-        "case": 16412
-    },
-    "investigatecase":{"status":"Under Investigation"}
+    ],
+    "name": "Atomation of API",
+    "description": "testing for the integration",
+    "category": "Fraud",
+    "priority": 5,
+    "threshold": 1000,
+    "assignment_mode": "round_robin",
+    "fallback_team": ""
+},
+  "scenariocreation":{
+    "name": "Test_Team_API",
+    "description": "",
+    "risk": "High",
+    "priority": 5,
+    "scenario_type": "Fraud",
+    "schema": "Transaction",
+    "table": "transaction",
+    "lookback_column": "transaction_date",
+    "lookback_mode": "simple",
+    "look_back_period_since": 11,
+    "look_back_period_since_unit": "months",
+    "team": 164,
+    "comments": [],
+    "is_batch": false,
+    "is_real_time": true,
+    "code_based": false
+},
+  "metricsetter": {
+    "alert_conditions": [
+      {
+        "subconditions": [
+          {
+            "parameter": "transaction.amount",
+            "type": "primitive",
+            "operator": ">",
+            "value": "0",
+            "value_type": "float",
+            "combinator": "",
+            "sequence_number": 1,
+            "other_details": {
+              "dynamic_parameters": [],
+              "version": ""
+            },
+            "metric_version": ""
+          }
+        ],
+        "comments": [],
+        "case_automation": true
+      }
+    ]
+  },
+  "scenarioactivation": {
+    "status": "Active"
+  },
+  "roleassignment": {
+    "user_id": 1,
+    "role_ids": [
+      96
+    ]
+  },
+  "scenariodeactivation": {
+    "status": "Unactive"
   }
-  
+}
